@@ -6,7 +6,11 @@ function activateGallery(){
     thumbnail.addEventListener("click", function() {
       // Set clicked image as main image.
       let newImageSrc = thumbnail.dataset.largeVersion;
-      mainImage.setAttribute("src", newImageSrc)
+      mainImage.setAttribute("src", newImageSrc);
+
+      // Change which image is current
+      document.querySelector(".current").classList.remove("current");
+      thumbnail.parentNode.classList.add("current");
     });
   });
 }
