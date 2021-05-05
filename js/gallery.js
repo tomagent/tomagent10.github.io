@@ -9,8 +9,9 @@ function activateGallery(){
       mainImage.setAttribute("src", newImageSrc);
 
       // Change which image is current
-      document.querySelector(".current").classList.remove("current");
-      thumbnail.parentNode.classList.add("current");
+      let currentClass = "current";
+      document.querySelector(".current").classList.remove(currentClass);
+      thumbnail.parentNode.classList.add(currentClass);
     });
   });
 }
